@@ -624,7 +624,7 @@ figcaption {
   line-height: 1.6em;
 }
 
-.tool_features a {
+li a {
   color: var(--fbg_black);
   text-decoration: underline;
   text-decoration-color: var(--accent_04);
@@ -632,7 +632,7 @@ figcaption {
   text-underline-offset: 4px;
 }
 
-.tool_features a:hover {
+li a:hover {
   text-decoration-color: var(--accent_05);
 }
 
