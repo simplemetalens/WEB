@@ -264,6 +264,10 @@ body {
   width: 100%;
   gap: 40px;
   padding: 160px min(8vw, 160px);
+  background-image: url('assets/hero_bg.png'); /* Path to your image */
+  background-size: cover; /* Cover the entire div */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
   /** height: 100dvh; **/
 } 
 
