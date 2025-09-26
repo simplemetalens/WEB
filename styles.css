@@ -445,6 +445,18 @@ body {
   align-items: start;
 }
 
+.pro_feature a {
+  color: var(--fbg_black);
+  text-decoration: underline;
+  text-decoration-color: var(--accent_04);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
+}
+
+.pro_feature a:hover {
+  text-decoration-color: var(--accent_05);
+}
+
 .feature {
   display: flex;
   flex-direction: column;
