@@ -45,116 +45,139 @@
                 <h2>Lightweight, rapid simulation for your metalens</h2>
                 <h3>Accelerating flat optics innovation by maximizing simulation speed while minimizing manual labor</h3>
             </div>
-            <button class="hero_button" onclick="scrollToDiv('pricing')">Get free trial license</button>
+            <button class="hero_button" onclick="scrollToDiv('pricing')">try SMD</button>
         </div>
-
-        
-        <div class="img_row">
-            <div class="img_tile">
-                <img src="assets/sim_result_1.png" alt="Intensity log scale"></a>
-            </div>
-            <div class="img_tile">
-                <img src="assets/sim_result_2.png" alt="Intensity linear scale"></a>
-            </div>
-            <div class="img_tile">
-                <img src="assets/sim_result_3.png" alt="Intensity along z-axis"></a>
-            </div>
-        </div>
-        
-
         <div class="products">
+            <div class="product_toggle">
+                <button class="active" onclick="showProduct('smdpro')" id="smdpro"><img class="toggle_img" src="assets/logo_dark.png" alt="SMD PRO icon"><h5>SMD PRO</h5></button>
+                <button onclick="showProduct('smdtool')" id="smdtool"><img class="toggle_img" src="assets/smd_logo.png" alt="SMD Tool icon"><h5>SMD Tool</h5></button>
+            </div>
 
-            <div class="value_prop">
-                <div class="title_tile">
-                    <div class="pro_header">
-                        <img src="assets/smd_pro_text.png" alt="PRO" height="60px">
-                        <h3>Performance</h3>
-                        <p class="title_p">Metalens Design & Simulation</p>
+            <div class="product_overview" id="smdpro_overview">
+                <div class="product_features">
+                    <div class="pro_feature">
+                        <h4>High Speed</h4>
+                        <p><a href="https://simplemetalens.gitbook.io/docs/smd-pro/smd-pro-vs-smd-tool" target="_blank">Up to 46000x faster than FDTD</a></p>
+                    </div>
+                    <div class="pro_feature">
+                        <h4>Unit Cell Library</h4>
+                        <p>Provides real-world <a href="https://simplemetalens.gitbook.io/docs/smd-pro/unit-cell-library" target="_blank">unit cell data</a> across visible and near-IR wavelengths</p>
+                    </div>
+                    <div class="pro_feature">
+                        <h4>Customizable GDS Settings</h4>
+                        <p>Provides flexibility for fabrication</p>
                     </div>
                 </div>
-                <div class="tile">
-                    <img src="assets/1mm.png" alt="A 1 mm2 metalens with 16,000,000 (16 million) unit cells can be built with a memory consumption of less than 1 GB in a few minutes.">
-                    <div class="tile_header">
-                        <h4><span>16 million</span> unit cells on 1GB memory</h4>
-                  </div>
-                </div>
-                <div class="tile">
-                    <img src="assets/gauge.png" alt="SMD PRO simulation is 46,000x faster than FDTD">
-                    <div class="tile_header">
-                        <h4>Simulate up to <span><a href="https://simplemetalens.gitbook.io/docs/smd-pro/smd-pro-vs-smd-tool" target="_blank"> 46,000x</a></span> faster than FDTD</h4>
-                  </div>
+                <div class="product_preview">
+                    <img class="uc_library" src="assets/uc_library.png" alt="SMD PRO Unit Cell data details">
+                    <figcaption>SMD PRO unit cell data details</figcaption>
                 </div>
             </div>
 
-            <div class="value_prop">
-                <div class="tile">
-                  <img src="assets/uc_details.png" alt="Unit Cell Library: Real-world unit cell data across visible and near-IR wavelengths">
-                    <div class="tile_header">
-                        <h4><span>Unit Cell Library</span></h4>
-                        <p>Real-world <a id="normal_p" href="https://simplemetalens.gitbook.io/docs/smd-pro/unit-cell-library" target="_blank">unit cell data</a> across visible and near-IR wavelengths</p>
+            <div class="product_overview" id="smdtool_overview">
+                <div class="product_preview">
+                    <img class="tool_ui" src="assets/smd_tool_ui.png" alt="SMD Tool's simulation settings">
+                    <figcaption>SMD Tool's simulation settings</figcaption>
+                </div>
+                <div class="smdtool_features">
+                    <div class="feature">
+                        <img class="smd_feature" src="assets/tool_phase.png" alt="SMD Tool feature: Generate target phase">
+                        <p>Generate target phase</p>
+                    </div>
+                    <div class="feature">
+                        <img class="smd_feature" src="assets/tool_unitcell.png" alt="SMD Tool feature: Build full metalens">
+                        <p>Build full metalens</p>
+                    </div>
+                    <div class="feature">
+                        <img class="smd_feature" src="assets/tool_gds.png" alt="SMD Tool feature: Export GDS">
+                        <p>Export GDS</p>
+                    </div>
+                    <div class="feature">
+                        <img class="smd_feature" src="assets/tool_beam.png" alt="SMD Tool feature: Simulate beam intensity">
+                        <p>Simulate beam intensity</p>
                     </div>
                 </div>
-                <div class="tile">
-                    <img src="assets/gds.png" alt="Customize GDS Settings">
-                    <div class="tile_header">
-                        <h4><span>Fabrication</span></h4>
-                        <br>
-                        <p>Adjust GDS settings for fabrication flexiblity</p>
+            </div>
+                  
+        </div>
+        <div class="pricing" id="pricing">
+            <div class="smd_pro">
+                <div class="tool">
+                    <div class="tool_name">
+                        <img class="smd_logo" src="assets/logo_dark.png" height=40px alt="SMD PRO logo"><h3>SMD PRO</h3>
                     </div>
                 </div>
-                <div class="tile">
-                  <img src="assets/shapes_cross.png" alt="Unit cell shapes">
-                    <div class="tile_header">
-                    <h4><span>Unit Cell Shapes</span></h4>
-                    <br>
-                    <p>11 + user-defined polygons</p>
+                <div class="tool_price">
+                    <div class="toggle">
+                        <button onclick="showPrice('3 months')" id="3 months">3 Months</button>
+                        <button class="active" onclick="showPrice('6 months')" id="6 months">6 Months</button>
+                        <button onclick="showPrice('12 months')" id="12 months">12 Months</button>
                     </div>
+                    <div class="price">
+                        <div class="price_display">
+                            <h4 id="price">USD 399</h4><h5>per token per license</h5>
+                        </div>
+                        <div class="price_display">
+                            <h5>Want to have multiple engineers on the same license? Adjust the quantity of tokens on the purchase page.</h5>
+                        </div>
+                    </div>
+                </div>                   
+                <div class="tool_features">
+                    <ul>
+                        <li>Up to 20x faster metalens building than Tool</li>
+                        <li>Up to 3.6x faster simulation than Tool</li>
+                        <li>Higher memory efficiency</li>
+                        <li>Simulatable lens size: unlimited (memory-dependent)</li>
+                        <li>Imaging simulation along tangential & sagittal axes</li>
+                        <li>Supports 11+ unit cell shapes (including all in Tool & polygon)</li>
+                        <li><a href="https://simplemetalens.gitbook.io/docs/smd-pro/unit-cell-library" target="_blank">Unit cell data</a> provided across visible and near-IR wavelengths</li>
+                        <li>Advanced GDS modification</li>
+                        <li>Modern GUI</li>
+                        <li>Regular product updates</li>
+                    </ul>
+                </div>
+                <div class="button_tray">
+                    <a id="purchase-link" href="/purchase-6months" target="_blank">
+                        <button class="primary_button" id="purchase-button">
+                            buy / renew license for 6mo
+                        </button>
+                    </a>
+                    <a href="pro_trial.html" target="_blank"><button class="secondary_button">get a free 15-day trial license</button></a>
+                    <a href="https://simplemetalens.gitbook.io/docs/smd-pro" target="_blank"><button class="plain_button">view document</button></a>
+
+                </div>
+            </div>
+            <div class="smd_tool">
+                <div class="tool">
+                    <div class="tool_name">
+                        <img class="smd_logo" src="assets/smd_logo.png" height=40px alt="SMD Toll icon"><h3>SMD Tool</h3>
+                    </div>
+                </div>
+                <div class="tool_price">
+                    <div class="price">
+                        <div class="price_display">
+                            <h4>Free</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="tool_features">
+                    <ul>
+                        <li><a href="https://simplemetalens.gitbook.io/docs/smd-pro/smd-pro-vs-smd-tool" target="_blank">13000x faster than FDTD</a></li>
+                        <li>Simulatable lens size: < 1 million unit cells</li>
+                        <li>Imaging simulation along tangential axis only</li>
+                        <li>Supports 3 unit cell shapes (circle, square, rectangle)</li>
+                        <li>No unit cell data provided</li>
+                        <li>No GDS modification</li>
+                        <li>Basic GUI</li>
+                        <li>No new updates</li>
+                    </ul>
+                </div>
+                <div class="button_tray">
+                    <a href="https://github.com/simplemetalens/smdtool/releases/download/1.29.00/SMDTool_v1.29.00.zip"><button class="secondary_button" id="smd_secondary">download SMD tool</button></a>
+                    <a href="https://github.com/simplemetalens/smdtool/releases/download/1.29.00/SMD.Tool.Tutorial_v1.29.00_doc20251024.pdf"><button class="plain_button" id="smd_plain">view document</button></a>
                 </div>
             </div>
         </div>
-
-        
-        <div class="pricing">
-            <div class="pricing_title">
-                <div class="price_header">
-                    <img src="assets/smd_pro_text.png" alt="PRO" height="60px">
-                    <h3>Pricing</h3>
-                    <p class="title_p">One-year license.<br>Optional renewal.</p>
-                </div>
-            </div>
-            <div class="pricing_cards">
-                <div class="pricing_card">
-                    <div class="pricing_header">
-                        <p>1 Token</p>
-                        <h3>USD 360<span>/ token</span></h3>
-                    </div>
-                    <a href="https://buy.stripe.com/3cIaEX3qxeXk7dZapIffy04" target="_blank"><button class="primary_button">Buy / Renew</button></a>
-                </div>
-                <div class="pricing_card">
-                    <div class="pricing_header">
-                        <p>2 Tokens</p>
-                        <h3>USD 240<span>/ token</span></h3>
-                    </div>
-                    <a href="https://buy.stripe.com/3cI5kD0eleXk0PB2Xgffy05" target="_blank"><button class="primary_button">Buy / Renew</button></a>
-                </div>
-                <div class="pricing_card">
-                    <div class="pricing_header">
-                        <p>3+ Tokens</p>
-                        <h3>USD 180<span>/ token</span></h3>
-                    </div>
-                    <a href="https://buy.stripe.com/4gM14n9OV9D0bufapIffy06" target="_blank"><button class="primary_button">Buy / Renew</button></a>
-                </div>
-                <div class="pricing_card">
-                    <div class="pricing_header">
-                        <p>30-Day Trial</p>
-                        <h3>FREE</h3>
-                    </div>
-                    <a href="https://simplemetalens.com/pro_trial.html" target="_blank"><button class="primary_button">Get Free Trial License</button></a>
-                </div>
-            </div>
-
-        </div>
-
         <footer>
             <div class="footer">
                 <div class="footer_menu">
@@ -170,8 +193,8 @@
                     <div class="footer_company">
                         <h5>Products</h5>
                         <div class="smd_products">
-                            <a href="https://simplemetalens.gitbook.io/docs/smd-pro" target="_blank">SMD PRO</a>
-                            <a href="https://simplemetalens.gitbook.io/docs/smd-tool" target="_blank">SMD Tool</a>
+                            <a href="#smdpro" onclick="showProduct('smdpro')">SMD PRO</a>
+                            <a href="#smdtool" onclick="showProduct('smdtool')">SMD Tool</a>
                         </div>
                     </div>
                     <div class="footer_contact">
@@ -211,6 +234,127 @@
         const currentYear = new Date().getFullYear();
         // Update the copyright year in the HTML
         document.getElementById('copyright-year').textContent = currentYear;
+
+
+
+        // product overview
+        function showProduct(type) {
+        // Remove active class from all buttons
+        document.querySelectorAll('button').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        
+        // Add active class to selected button
+        document.getElementById(type).classList.add('active');
+        
+        // Hide all overview sections
+        document.querySelectorAll('.product_overview').forEach(section => {
+            section.classList.remove('active');
+        });
+        
+        // Show selected overview section
+        document.getElementById(`${type}_overview`).classList.add('active');
+
+        // On page load, activate 6 months by default
+        console.log('Switching product set, resetting pricing');
+        showPrice('6 months');
+        }
+
+    
+        // Ensure pro is displayed on page load
+        document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('smdpro').classList.add('active');
+        showProduct('smdpro');
+        });
+
+
+        // new pricing
+        const pricingData = {
+        '3 months': {
+            license: 'USD 299',
+            purchaseLink: 'https://buy.stripe.com/4gM8wP6CJ6qO0PB2Xgffy00'  
+        },
+        '6 months': {
+            license: 'USD 399',
+            purchaseLink: 'https://buy.stripe.com/9B67sL7GNdTg55R1Tcffy01'
+        },
+        '12 months': {
+            license: 'USD 499',
+            purchaseLink: 'https://buy.stripe.com/3cI28r4uB9D069V55offy02'
+        }
+    };
+
+        function showPrice(duration) {
+            // Remove active class from all buttons
+            document.querySelectorAll('.toggle button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Add active class to selected button
+            document.getElementById(duration).classList.add('active');
+            
+            // Update prices based on selected duration
+            const prices = pricingData[duration];
+            document.getElementById('price').textContent = prices.license;
+            
+            // Update purchase link
+            const purchaseLink = document.getElementById('purchase-link');
+            purchaseLink.href = prices.purchaseLink;
+            
+            // Update button text
+            const purchaseButton = document.getElementById('purchase-button');
+            purchaseButton.textContent = `buy / renew for ${duration}`;
+        }
+
+        // On page load, activate 6 months by default
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('6 months').classList.add('active');
+            showPrice('6 months');
+        });
+
+
+        /*
+        // pricing
+        const pricingData = {
+            '3months': {
+                license: 'USD 299',
+                token: 'USD 45 / mo'
+            },
+            '6months': {
+                license: 'USD 399',
+                token: 'USD 25 / mo'
+            },
+            '12months': {
+                license: 'USD 499',
+                token: 'USD 15 / mo'
+            }
+        };
+
+        function showPrice(duration) {
+        // Remove active class from all buttons
+        document.querySelectorAll('.toggle button').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        
+        // Add active class to selected button
+        document.getElementById(duration).classList.add('active');
+        
+        // Update prices based on selected duration
+        const prices = pricingData[duration];
+        document.getElementById('price').textContent = prices.license;
+        document.getElementById('token_price').querySelector('span').textContent = prices.token;
+        }
+
+        // On page load, activate 6 months by default
+        document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('6months').classList.add('active');
+        showPrice('6months');
+        });
+        
+        */
+
+
+
     </script>
 
 </body>
