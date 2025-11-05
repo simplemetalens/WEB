@@ -476,7 +476,7 @@ body {
   display: flex;
   flex-direction: row;
   background-color: var(--neutral_01);
-  gap: 40px;
+  gap: 80px;
   padding: 120px min(8vw, 160px);
   width: 100%;
   justify-content: center;
