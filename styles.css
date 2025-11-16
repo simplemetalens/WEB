@@ -716,6 +716,14 @@ body {
     width: 100%;
   }
 
+  .secondary_button {
+    width: 100%;
+  }
+
+  .button_tray {
+    flex-direction: column;
+  }
+
   .value_prop {
     flex-direction: column;
     gap: 40px;
